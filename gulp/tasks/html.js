@@ -33,8 +33,8 @@ const html = () => {
         )
         .pipe(
             beautify({
-                indent_size: 2,
-                indent_char: "",
+                indent_size: 4,
+                indent_char: "\t",
                 wrap_line_length: 130,
                 wrap_attributes: "auto",
             })
