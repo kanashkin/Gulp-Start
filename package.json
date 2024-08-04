@@ -44,6 +44,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "gulp-beautify": "^3.0.0",
     "gulp-cli": "^2.3.0"
   }
 }
