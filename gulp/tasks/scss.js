@@ -3,8 +3,6 @@ import gulpSass from 'gulp-sass'
 import rename from 'gulp-rename'
 import cleanCss from 'gulp-clean-css'
 import autoprefixer from 'gulp-autoprefixer'
-import groupCssMediaQueries from 'gulp-group-css-media-queries'
-import purgeCss from 'gulp-purgecss'
 import beautify from 'gulp-beautify'
 import { log } from 'console'
 
@@ -51,8 +49,8 @@ const scss = () => {
 		)
 		.pipe(
 			beautify.css({
-				indent_with_tabs: true, // Использовать табуляцию
-				indent_size: 4, // Размер табуляции
+				indent_with_tabs: true,
+				indent_size: 4,
 			})
 		)
 		.pipe(app.gulp.dest(app.path.build.css))
