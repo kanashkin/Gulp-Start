@@ -1,7 +1,5 @@
 import dartSass from 'sass'
 import gulpSass from 'gulp-sass'
-import rename from 'gulp-rename'
-import cleanCss from 'gulp-clean-css'
 import autoprefixer from 'gulp-autoprefixer'
 import beautify from 'gulp-beautify'
 import { log } from 'console'
@@ -30,18 +28,8 @@ const scss = () => {
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
-				purgeCss({
-					content: [`${app.path.watch.html}`, `${app.path.watch.js}`],
-					defaultExtractor: content => content.match(/[A-z0-9-:\/\.]+/g) || [],
-				})
-			)
-		)
-		.pipe(app.plugins.if(app.isBuild, groupCssMediaQueries()))
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
 				autoprefixer({
-					grid: true,
+					grid: 'autoplace',
 					overrideBrowserslist: ['last 3 versions'],
 					cascade: true,
 				})
