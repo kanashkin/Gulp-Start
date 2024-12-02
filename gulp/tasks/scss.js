@@ -19,6 +19,7 @@ const scss = () => {
 				})
 			)
 		)
+		.pipe(app.plugins.replace(/\/\/(.*)/g, '/* $1 */'))
 		.pipe(
 			sass({
 				outputStyle: 'expanded',
@@ -39,6 +40,7 @@ const scss = () => {
 			beautify.css({
 				indent_with_tabs: true,
 				indent_size: 4,
+				preserve_comments: true,
 			})
 		)
 		.pipe(app.gulp.dest(app.path.build.css))

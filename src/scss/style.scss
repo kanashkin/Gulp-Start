@@ -1,7 +1,69 @@
-@import 'base/variables';
-@import 'base/reset';
-@import 'base/fonts';
-@import 'base/icons';
+* {
+	padding: 0;
+	margin: 0;
+	border: 0 ;
+	outline: none ;
+	border-collapse: collapse;
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	background-repeat: no-repeat;
+}
 
-@import 'blocks/header';
-@import 'blocks/footer';
+:root {
+	--primary-color: #000000;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'font-name', sans-serif;
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+input {
+	width: 100%;
+}
+
+button,
+input,
+textarea,
+select,
+option {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	background: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+li {
+	list-style: none;
+}
+
+span {
+	font-family: inherit;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+}
+
+.container {
+	max-width: 1360px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
