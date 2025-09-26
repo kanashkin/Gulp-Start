@@ -16,7 +16,7 @@ const copyFonts = () => {
 };
 
 const fontsStyle = () => {
-    let fontsFile = path.join(app.path.srcFolder, 'scss/fonts.scss');
+    let fontsFile = path.join(app.path.srcFolder, 'scss/style-fonts.scss');
     fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
         if (fontsFiles) {
             if (!fs.existsSync(fontsFile)) {
