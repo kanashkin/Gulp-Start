@@ -3,7 +3,7 @@ import path from "path";
 
 const copyFonts = () => {
     return app.gulp
-        .src(path.join(app.path.srcFolder, '/fonts/*.{ttf,woff,woff2,svg,eot}'))
+        .src(path.join(app.path.srcFolder, '/assets/fonts/*.{ttf,woff,woff2,svg,eot}'))
         .pipe(
             app.plugins.plumber(
                 app.plugins.notify.onError({
@@ -16,7 +16,7 @@ const copyFonts = () => {
 };
 
 const fontsStyle = () => {
-    let fontsFile = path.join(app.path.srcFolder, 'scss/style-fonts.scss');
+    let fontsFile = path.join(app.path.srcFolder, '/assets/scss/style-fonts.scss');
     fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
         if (fontsFiles) {
             if (!fs.existsSync(fontsFile)) {
